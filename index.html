@@ -1,0 +1,36 @@
+<!-- 機能要件
+パスワードの長さを指定  (10~100)
+使用する文字種（大文字・小文字・数字・記号）を選択 (input-4)
+ーーチェックボックスで文字種を選択可能に
+生成ボタンでランダムなパスワードを作成(button-1)
+ーーMath.random() を活用してランダムな文字を選択
+クリップボードにコピー機能(button1)
+ーーnavigator.clipboard.writeText() でコピー機能を実装 -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="text" disabled id="display">
+    <button onclick="viBtn()">v</button>
+    <input type="text" id="length" placeholder="password length(ex: 15)">
+    <div>
+        <label for="">'A'</label>
+        <input type="checkbox" id="upper">
+        <label for="">'a'</label>
+        <input type="checkbox" id="lower">
+        <label for="">'1'</label>
+        <input type="checkbox" id="digit">
+        <label for="">'@'</label>
+        <input type="checkbox" id="symbol">
+    </div>
+    <button onclick="generatePass()">生成</button>
+    <button onclick="clip()">copy</button>
+    <script src="script.js"></script>
+</body>
+</html>
